@@ -12,7 +12,7 @@ Version: 1.0.8-PHP7
 
 Author: aliuly
 
-Edited by Flauxes
+Edited by Flaxues
 
 ### [Source](https://github.com/Muirfield/pocketmine-plugins/tree/master/ItemCasePE)
 
@@ -23,4 +23,4 @@ Edited by Flauxes
 
 
 
-Readme by Flauxes and ondraczsk
+Readme by Flaxues and ondraczsk
