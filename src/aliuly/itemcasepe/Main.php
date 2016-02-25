@@ -181,7 +181,7 @@ class Main extends PluginBase implements CommandExecutor,Listener {
 	public function spawnLevelItemCases(Level $level){
 		if (!isset($this->cases[$level->getName()])) return;
 		$ps = $level->getPlayers();
-		if (!count($ps)) return;
+		if (!count($ps)) continue;
 		foreach (array_keys($this->cases[$level->getName()]) as $cid) {
 			$this->sndItemCase($level,$cid,$ps);
 		}

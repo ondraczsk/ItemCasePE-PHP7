@@ -1,5 +1,4 @@
 <?php
-
 /*
  *
  *  ____            _        _   __  __ _                  __  __ ____
@@ -14,28 +13,22 @@
  * (at your option) any later version.
  *
  * @author PocketMine Team
-
  *
  *
 */
 namespace aliuly\itemcasepe;
-
 use pocketmine\scheduler\PluginTask;
 use pocketmine\plugin\Plugin;
-
 /**
  * Allows the creation of simple callbacks with extra data
  * The last parameter in the callback will be this object
  *
  */
 class PluginCallbackTask extends PluginTask{
-
 	/** @var callable */
 	protected $callable;
-
 	/** @var array */
 	protected $args;
-
 	/**
 	 * @param Plugin   $owner
 	 * @param callable $callable
@@ -47,19 +40,16 @@ class PluginCallbackTask extends PluginTask{
 		$this->args = $args;
 		$this->args[] = $this;
 	}
-
 	/**
 	 * @return callable
 	 */
 	public function getCallable(){
 		return $this->callable;
 	}
-
 	public function onRun($currentTicks){
 		$c = $this->callable;
 		$args = $this->args;
 		$args[] = $currentTicks;
 		$c(...$args);
 	}
-
 }
